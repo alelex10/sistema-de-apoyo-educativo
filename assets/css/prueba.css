@@ -1,0 +1,198 @@
+/* ------------- LOGIN REGISTER ------------------ */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.7;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  overflow: hidden;
+}
+a {
+  cursor: pointer;
+  transition: all 200ms linear;
+  text-decoration: none;
+}
+.link {
+  color: #c4c3ca;
+}
+.link:hover {
+  color: #ffeba7;
+}
+p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+h6 {
+  text-align: center;
+}
+h6 span {
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+/*  */
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+/* barra amarilla donde gira el circulo */
+.checkbox:checked + label,
+.checkbox:not(:checked) + label {
+  position: relative;
+  display: block;
+  text-align: center;
+  right: 1rem;
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  margin: 10px auto;
+  cursor: pointer;
+  background-color: #ffeba7;
+}
+/* flecha circular */
+.checkbox:checked + label[for="reg-log"] i,
+.checkbox:not(:checked) + label[for="reg-log"] i {
+  position: absolute;
+  z-index: 20;
+  left: -10%;
+  bottom: -40%;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  color: #2229a8;
+  font-size: 1.7rem;
+  transition: 0.5s ease;
+}
+/* despaza y rota la flecha redondeada */
+.checkbox:checked + label[for="reg-log"] i {
+  transform: translateX(2.75rem) rotate(-315deg);
+}
+
+.card-3d-wrap {
+  width: 27.5rem;
+  max-width: 100%;
+  height: 25rem;
+  perspective: 800px;
+  margin-top: 60px;
+}
+.card-3d-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  /* transicion del giro del form */
+  transition: all 600ms ease-out;
+}
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  background-color: #2a2b38;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  position: absolute;
+  border-radius: 6px;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+/* rota para atras la  */
+.card-back {
+  transform: rotateY(180deg);
+}
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+  transform: rotateY(180deg);
+}
+.center-wrap {
+  display: flex;
+  width: 100%;
+  /* al darle valor en el eje z, estoy haciendo que el form tenga parte trasera, la parte del crad-back y card.front se vea uno ensima del otro  */
+  transform: translate3d(0, 0, 2.188rem);
+  z-index: 20;
+  height: 100%;
+}
+/* estilo del formulario */
+.form-style {
+  padding: 0.4rem 2rem;
+  height: 2rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  border: none;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  gap: 1rem;
+}
+.form div{
+  overflow: hidden;
+  position: relative;
+  width: 70%;
+}
+.form div label{
+  position: absolute;
+  top: 23%;
+  left: 3%;
+  color: #ffeba7;
+}
+.form div i:hover{
+  cursor: pointer;
+  color: #950909;
+  transition: 0.5s ease;
+}
+.form-style:focus,
+.form-style:active {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
+}
+
+.btn {
+  border-radius: 4px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  background-color: #ffeba7;
+  color: #102770;
+  box-shadow: 0 8px 24px 0 rgba(255, 235, 167, 0.2);
+}
+.btn:active,
+.btn:focus,
+.btn:hover{
+  background-color: #102770;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+}
+/* la opcaidad de lo que indica que tiene que ingresar */
+.form div input::placeholder  {
+  color: #c4c3ca;
+  opacity: 0.4;
+    transition: all 200ms linear;
+}
+/* para que desaparesca lo que indica que tiene que ingresar en cada imput */
+.form input:focus::placeholder  {
+  opacity: 0;
+    transition: all 200ms linear;
+}

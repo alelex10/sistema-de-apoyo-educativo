@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Bienvenidos a mi página webpersonal, donde comparto mis pensamientos y aventuras."
+    />
+    <meta name="keywords" content="aprender, juego, puzzle,enseñar" />
+    <meta name="author" content="Alejandro" />
+    <!-- falta icono
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" /> 
+    -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- funte de google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imprima&display=swap"
+      rel="stylesheet"
+    />
+    <!-- iconos de fontawesome.com -->
+    <script
+      src="https://kit.fontawesome.com/8db7412aba.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- js -->
+    <script src="assets/js/textoPortada.js"></script>
+    <title>Sistema de Apoyo Educativo</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img class="navLogo" src="" alt="logo" />
+        <ul>
+          <li><a href="index.html">inicio</a></li>
+          <li class="misProyectos">
+            <a href="./paginas/mis-proyectos/misProyectos.html"
+              >mis proyectos</a
+            >
+          </li>
+          <li>
+            <a href="./paginas/proyectos.html">proyectos</a>
+          </li>
+          <li class="">
+            <a href="./paginas/contactanos.html">contactanos</a>
+          </li>
+          <li><a href="./paginas/ayuda/ayuda.html">ayuda</a></li>
+          <li class="ordenSuperior"><label for="btn-login-modal">login</label></li>
+          <li class="ordenSuperior"><label for="btn-register-modal">register</label></li>
+          <!-- sub enlaces misProyectos -->
+          <!-- al superponerse los objetos el enlace que se sobrepone sobre el otro es el que este mas abajo en el codigo a menos que se aplique un z-index-->
+          <ol class="navSubEnlaces overlay">
+            <li>
+              <a href="paginas/mis-proyectos/datos-proyectos.html">Datos</a>
+            </li>
+            <li>
+              <a href="paginas/mis-proyectos/lista-proyectos.html"
+                >Lista Proyectos</a
+              >
+            </li>
+            <li>
+              <a href="paginas/mis-proyectos/nuevo-proyecto.html"
+                >Nuevo Proyecto</a
+              >
+            </li>
+          </ol>
+          <li class="alturaEnlacesNav"></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ------------------MODAL LOGIN REGISTER------------------ -->
+    
+    <input type="radio" id="btn-hinden-modal" name="modal" checked/>
+    <input type="radio" id="btn-login-modal"   name="modal" />
+    <input type="radio" id="btn-register-modal"   name="modal" >
+    <input type="checkbox" id="btn-rodante"   name="modal" >
+      
+    <div class="container-modal">
+      <!-- este label es para cuando el usuario da click por fuera del cuadro -->
+      <label for="btn-hinden-modal"></label>
+      <div class="container">
+        <label for="btn-hinden-modal"><i class="fa-solid fa-xmark"></i></label>
+        <h6><span>iniciar</span><span>registrarse</span></h6>
+        
+        <!-- flecha circular y barra amarilla -->
+        <label for="btn-rodante"
+          ><i class="fa-solid fa-circle-arrow-up fa-rotate-90"></i
+        ></label>
+        <div class="card-3d-wrap">
+          <div class="card-3d-wrapper">
+            <!-- frond -->
+            <div class="card-front">
+              <div class="center-wrap">
+                <div class="form">
+                  <h4>Iniciar</h4>
+                  <div>
+                    <label for="logemail"
+                      ><i class="fa-solid fa-at"></i
+                    ></label>
+                    <input
+                      type="email"
+                      name="logemail"
+                      class="form-style"
+                      placeholder="Tu Email"
+                      id="logemail"
+                    />
+                  </div>
+                  <div>
+                    <label for="logpass"
+                      ><i class="fa-solid fa-lock"></i
+                    ></label>
+                    <input
+                      type="password"
+                      name="logpass"
+                      class="form-style"
+                      placeholder="contraseña"
+                      id="logpass"
+                    />
+                  </div>
+                  <a href="#" class="btn">submit</a>
+                  <p>
+                    <a href="#0" class="link">Forgot your password?</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- back -->
+            <div class="card-back">
+              <div class="center-wrap">
+                <div class="form">
+                  <h4>Resgistrarse</h4>
+                  <div>
+                    <label for="logname"
+                      ><i class="fa-solid fa-user"></i
+                    ></label>
+                    <input
+                      type="text"
+                      name="logname"
+                      class="form-style"
+                      placeholder="Your Full Name"
+                      id="logname"
+                    />
+                  </div>
+                  <div>
+                    <label for="logemail"
+                      ><i class="fa-solid fa-at"></i
+                    ></label>
+                    <input
+                      type="email"
+                      name="logemail"
+                      class="form-style"
+                      placeholder="Your Email"
+                      id="logemail"
+                    />
+                  </div>
+                  <div>
+                    <label for="logpass"
+                      ><i class="fa-solid fa-lock"></i
+                    ></label>
+                    <input
+                      type="password"
+                      name="logpass"
+                      class="form-style"
+                      placeholder="Your Password"
+                      id="logpass"
+                    />
+                  </div>
+                  <a href="#" class="btn">submit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="mainIndex">
+      
+      <!-- ------------------ PORTADA ------------------ -->
+      <section class="portada">
+        <img src="assets/img/portada.jpeg" alt="portada" />
+
+        <div class="descripcionPagina output" id="output">
+          <h1 class="cursor">
+            <!-- nombreDelProyecto es una plataforma que te sirve para crear tutoriales sobre cualquier tema que quieras enseñar de manera sencilla, creando una plantilla de un minijuego, a traves de un custionario donde definiras las mecanicas y luego modificarlo internamente con una serie de herramientas. -->
+          </h1>
+          <h2></h2>
+          <a class="enlacesPortada" href="tutorial.html">Tutorial</a>
+          <a class="enlacesPortada" href="login.html">Login</a>
+          <a class="enlacesPortada" href="register.html">Register</a>
+        </div>
+        <!-- <div class="descripcionPagina outpud" id="outpud">
+          <h1 class="cursor"></h1>
+          <h2></h2>
+        </div> -->
+      </section>
+
+      <!---------------expoProyectosIndex-------------------------- -->
+      <div class="tituloIndex">
+        <h1>Algunos Proyectos</h1>
+        <hr />
+      </div>
+
+      <section class="cardsProyectos">
+        <div class="card">
+          <div class="wrapper">
+            <div class="data">
+              <div class="content">
+                <span class="author">Jane Doe</span>
+                <h1 class="title">
+                  Stranger Things: The sound of the Upside Down
+                </h1>
+                <p class="text">
+                  The antsy bingers of Netflix will eagerly anticipate the
+                  digital release of the Survive soundtrack, out today.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="wrapper">
+            <div class="data">
+              <div class="content">
+                <span class="author">Jane Doe</span>
+                <h1 class="title">
+                  Stranger Things: The sound of the Upside Down
+                </h1>
+                <p class="text">
+                  The antsy bingers of Netflix will eagerly anticipate the
+                  digital release of the Survive soundtrack, out today.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="wrapper">
+            <div class="data">
+              <div class="content">
+                <span class="author">Jane Doe</span>
+                <h1 class="title">
+                  Stranger Things: The sound of the Upside Down
+                </h1>
+                <p class="text">
+                  The antsy bingers of Netflix will eagerly anticipate the
+                  digital release of the Survive soundtrack, out today.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="wrapper">
+            <div class="data">
+              <div class="content">
+                <span class="author">Jane Doe</span>
+                <h1 class="title">
+                  Stranger Things: The sound of the Upside Down
+                </h1>
+                <p class="text">
+                  The antsy bingers of Netflix will eagerly anticipate the
+                  digital release of the Survive soundtrack, out today.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="wrapper">
+            <div class="data">
+              <div class="content">
+                <span class="author">Jane Doe</span>
+                <h1 class="title">
+                  Stranger Things: The sound of the Upside Down
+                </h1>
+                <p class="text">
+                  The antsy bingers of Netflix will eagerly anticipate the
+                  digital release of the Survive soundtrack, out today.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="wrapper">
+            <div class="data">
+              <div class="content">
+                <span class="author">Jane Doe</span>
+                <h1 class="title">
+                  Stranger Things: The sound of the Upside Down
+                </h1>
+                <p class="text">
+                  The antsy bingers of Netflix will eagerly anticipate the
+                  digital release of the Survive soundtrack, out today.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer>
+      <div class="footer-redes">
+        <a href="https://www.instagram.com/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.facebook.com/"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://discord.com/"
+          ><i class="fa-brands fa-discord tooltip"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+</html>

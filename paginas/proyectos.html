@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Bienvenidos a mi página webpersonal, donde comparto mis pensamientos y aventuras."
+    />
+    <meta name="keywords" content="aprender, juego, puzzle,enseñar" />
+    <meta name="author" content="Alejandro" />
+    <!-- falta icono
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" >
+    <link rel="icon" href="favicon.ico" type="image/x-icon" > 
+    -->
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <!-- funte de google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imprima&display=swap"
+      rel="stylesheet"
+    />
+    <!-- iconos de fontawesome.com -->
+    <script
+      src="https://kit.fontawesome.com/8db7412aba.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Sistema de Apoyo Educativo</title>
+  </head>
+  <script src="assets/js/textoPortada.js"></script>
+  <body>
+    <body>
+      <header>
+        <nav>
+          <img class="navLogo" src="" alt="logo" />
+          <ul>
+            <li><a clase="navbar" href="../index.html">inicio</a></li>
+            <li class="misProyectos">
+              <a clase="navbar " href="mis-proyectos/misProyectos.html"
+                >mis proyectos</a
+              >
+            </li>
+            <li>
+              <a clase="navbar" href="proyectos.html">proyectos</a>
+            </li>
+            <li>
+              <a clase="navbar" href="contactanos.html">contactanos</a>
+            </li>
+            <li><a clase="navbar" href="ayuda/ayuda.html">ayuda</a></li>
+            <li></li>
+            <li><a clase="navbar" href="login.html">login</a></li>
+            <li><a clase="navbar" href="register.html">register</a></li>
+            <!-- sub enlaces misProyectos -->
+            <!-- al superponerse los objetos el enlace que se sobrepone sobre el otro es el que este mas abajo en el codigo a menos que se aplique un z-index-->
+            <ol class="navSubEnlaces overlay">
+              <li>
+                <a href="paginas/mis-proyectos/datos-proyectos.html">Datos</a>
+              </li>
+              <li>
+                <a href="paginas/mis-proyectos/lista-proyectos.html"
+                  >Lista Proyectos</a
+                >
+              </li>
+              <li>
+                <a href="paginas/mis-proyectos/nuevo-proyecto.html"
+                  >Nuevo Proyecto</a
+                >
+              </li>
+            </ol>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main-proyectos">
+        <!-- Filtros -->
+        <!-- los imputs van ahi por que:
+        CSS no tiene un selector que 
+        permita subir en la jerarquía del DOM para seleccionar un elemento padre 
+        basándose en un elemento hijo. Esto se debe a que CSS, por su naturaleza,
+        está más orientado a seleccionar elementos descendientes 
+        y aplicar estilos según su estructura y jerarquía en el DOM. -->
+
+        <!-- temas -->
+        <input type="checkbox" id="todos" name="temas" value="todos" />
+        <input type="checkbox" id="sumar" name="temas" value="sumar" />
+        <input type="checkbox" id="restar" name="temas" value="restar" />
+        <input
+          type="checkbox"
+          id="multiplicar"
+          name="temas"
+          value="multiplicar"
+        />
+        <input type="checkbox" id="dividir" name="temas" value="dividir" />
+
+        <!-- autores -->
+        <input  type="checkbox" id="todos" name="autores" value="todos" />
+        <input type="checkbox" id="sumar" name="autores" value="sumar" />
+        <input type="checkbox" id="restar" name="autores" value="restar" />
+        <!-- Desplegable de materias -->
+        <!-- atrivuto checked para que comiense activada*(no tiene valor) -->
+        <section class="seccionfiltros">
+          <!-- imputs para desplegar las opciones -->
+          <input type="checkbox" id="temas" name="filtros" value="temas" />
+          <input type="checkbox" id="autores" name="filtros" value="autores" />
+
+          <div class="filtrosSeleccionados">
+            <!-- filtro Seleccionados -->
+            <h2>Filtros:</h2>
+            <ul>
+              <li><label for="sumar">sumar</label></li>
+              <li>
+                <label for="multiplicar">multiplicar</label>
+              </li>
+              <li>
+                <label for="dividir">dividir</label>
+              </li>
+              <li>
+                <label for="restar">restar</label>
+              </li>
+            </ul>
+          </div>
+          <!-- filtro Temas -->
+          <div class="filtros filtroTemas">
+            <label for="temas"><h2>Temas</h2></label>
+            <ul>
+              <!-- <li class="todos">
+                
+                <label for="restar"></label>
+                <label for="sumar"></label> 
+                <p>todos</p>
+              </li> -->
+              <li><label for="sumar">sumar</label></li>
+              <li>
+                <label for="multiplicar">multiplicar</label>
+              </li>
+              <li>
+                <label for="dividir">dividir</label>
+              </li>
+              <li>
+                <label for="restar">restar</label>
+              </li>
+            </ul>
+          </div>
+          <!-- filtro Autor -->
+          <div class="filtros filtroAutor">
+            <label for="autores"><h2>Jane Doe</h2></label>
+            <ul>
+              <li><label for="todos">todos</label></li>
+              <li><label for="Dani">Dani</label></li>
+              <li>
+                <label for="Juan">Juan</label>
+              </li>
+              <li>
+                <label for="Pedro">Pedro</label>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section class="proyectos">
+          <ul class="cardsProyectos margenGrid">
+            <li class="card" data-category="sumar">
+              <div class="wrapper">
+                <div class="data">
+                  <div class="content">
+                    <div>
+                      <span class="author">Jane Doe</span>
+                      <span class="tag"> matematicas</span>
+                    </div>
+                    <h1 class="title">
+                      <p>Stranger Things: The sound of the Upside Down</p>
+                    </h1>
+                    <p class="text">
+                      The antsy bingers of Netflix will eagerly anticipate the
+                      digital release of the Survive soundtrack, out today.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card" data-category="dividir multiplicar">
+              <div class="wrapper">
+                <div class="data">
+                  <div class="content">
+                    <span class="author">Jane Doe</span>
+                    <h1 class="title">
+                      <p>Stranger Things: The sound of the Upside Down</p>
+                    </h1>
+                    <p class="text">
+                      The antsy bingers of Netflix will eagerly anticipate the
+                      digital release of the Survive soundtrack, out today.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card" data-category="sumar">
+              <div class="wrapper">
+                <div class="data">
+                  <div class="content">
+                    <span class="author">Jane Doe</span>
+                    <h1 class="title">
+                      <p>Stranger Things: The sound of the Upside Down</p>
+                    </h1>
+                    <p class="text">
+                      The antsy bingers of Netflix will eagerly anticipate the
+                      digital release of the Survive soundtrack, out today.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card" data-category="multiplicar">
+              <div class="wrapper">
+                <div class="data">
+                  <div class="content">
+                    <span class="author">Jane Doe</span>
+                    <h1 class="title">
+                      <p>Stranger Things: The sound of the Upside Down</p>
+                    </h1>
+                    <p class="text">
+                      The antsy bingers of Netflix will eagerly anticipate the
+                      digital release of the Survive soundtrack, out today.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card" data-category="restar">
+              <div class="wrapper">
+                <div class="data">
+                  <div class="content">
+                    <span class="author">Jane Doe</span>
+                    <h1 class="title">
+                      <p>Stranger Things: The sound of the Upside Down</p>
+                    </h1>
+                    <p class="text">
+                      The antsy bingers of Netflix will eagerly anticipate the
+                      digital release of the Survive soundtrack, out today.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card" data-category=" restar">
+              <div class="wrapper">
+                <div class="data">
+                  <div class="content">
+                    <span class="author">Jane Doe</span>
+                    <h1 class="title">
+                      <p>Stranger Things: The sound of the Upside Down</p>
+                    </h1>
+                    <p class="text">
+                      The antsy bingers of Netflix will eagerly anticipate the
+                      digital release of the Survive soundtrack, out today.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card" data-category="sumar restar">
+              <div class="wrapper">
+                <div class="data">
+                  <div class="content">
+                    <span class="author">Jane Doe</span>
+                    <h1 class="title">
+                      <p>Stranger Things: The sound of the Upside Down</p>
+                    </h1>
+                    <p class="text">
+                      The antsy bingers of Netflix will eagerly anticipate the
+                      digital release of the Survive soundtrack, out today.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card" data-category="sumar">
+              <div class="wrapper">
+                <div class="data">
+                  <div class="content">
+                    <span class="author">Jane Doe</span>
+                    <h1 class="title">
+                      <p>Stranger Things: The sound of the Upside Down</p>
+                    </h1>
+                    <p class="text">
+                      The antsy bingers of Netflix will eagerly anticipate the
+                      digital release of the Survive soundtrack, out today.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="card" data-category="multioplicar">
+              <div class="wrapper">
+                <div class="data">
+                  <div class="content">
+                    <span class="author">Jane Doe</span>
+                    <h1 class="title">
+                      <p>Stranger Things: The sound of the Upside Down</p>
+                    </h1>
+                    <p class="text">
+                      The antsy bingers of Netflix will eagerly anticipate the
+                      digital release of the Survive soundtrack, out today.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <div class="footer-redes">
+          <a href="https://www.instagram.com/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://twitter.com/"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="https://www.facebook.com/"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://discord.com/"
+            ><i class="fa-brands fa-discord tooltip"></i
+          ></a>
+        </div>
+      </footer>
+    </body>
+  </body>
+</html>
